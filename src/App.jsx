@@ -5,7 +5,7 @@ function App() {
     <div>
       <h1> Users</h1>
       <User name="Riya" description="FSWD" />
-      <User name="Elon Musk" description="FSWD" />
+      {/*<User name="Elon Musk" description="FSWD" />*/}
     </div>
   );
 }

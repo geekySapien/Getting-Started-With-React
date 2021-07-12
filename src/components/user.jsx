@@ -25,8 +25,18 @@ class User extends React.Component {
         this.state = {
             planet: "Earth"
         }
+        console.log("I am from the constructor() method ");
     }
+
+    componentDidMount() {
+        console.log(
+            "I am from the componentDidMount() method"
+        );
+        this.setState({ planet: "Mars" })
+    }
+
     render() {
+        console.log("I am from the render () method");
         return (
             <div>
                 <h1>
@@ -34,6 +44,9 @@ class User extends React.Component {
                 </h1>
                 <p>
                     {this.props.description}
+                </p>
+                <p>
+                    {this.state.planet}
                 </p>
             </div>
 
