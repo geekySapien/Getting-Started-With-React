@@ -1,0 +1,35 @@
+There are three Stages of Component Life Cycle
+
+1. Mounting 
+
+following thrree methods will be executed in the given order
+
+constructor()
+
+render()
+
+componentDidMount() -> Is fired during initial render of a component.
+
+
+2. Updating
+
+following 5 methods will be executed in the given order
+
+getDerivedStateFromProp(prop, state) -> returns either null or new state  object
+
+shouldComponentUpdate(nextProp, nextState) -> returns boolean value 
+
+render()
+
+getSnapshotBeforeUpdate(prevProp, prevState) -> returns boolean value
+
+componentDidUpdate()
+
+
+
+3. Unmounting
+
+componentWillUnmount()
+{
+    console.log("Bye Bye");
+}

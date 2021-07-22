@@ -32,9 +32,32 @@ class User extends React.Component {
         console.log(
             "I am from the componentDidMount() method"
         );
-        this.setState({ planet: "Mars" })
+        this.setState({ planet: "Saturn" })
     }
 
+    //static getDerivedStateFromProp(prop, state)
+    //{
+    //    console.log("I am from get Derived State From Prop");
+    //    return {planet:"Saturn"};
+    //}
+    shouldComponentUpdate(nextProp, nextState)
+    {
+        console.log("I am from should Component Update");
+        console.log({nextProp, nextState});
+        return true;
+    }
+    getSnapshotBeforeUpdate(prevProp, prevState)
+    {
+        console.log("I am from get Snapshot before Update")
+        console.log({prevProp, prevState});
+        return true;
+    }
+    componentDidUpdate()
+    {
+        console.log("I am from Component Did Update");
+        console.log(this.state);
+
+    }
     render() {
         console.log("I am from the render () method");
         return (
