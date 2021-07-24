@@ -19,7 +19,7 @@
 //This is a Class Component
 
 import React from 'react';
-class User extends React.Component {
+/*class User extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -76,6 +76,50 @@ class User extends React.Component {
         )
     }
 
-}
+}*/
+
+const User=(props)=>{
+    const [planet, setPlanet]=React.useState("Earth");
+    console.log(planet);
+
+    //componentDidMount
+    //componentWillUnmount                
+    React.useEffect(()=>{
+        setPlanet("Venus");
+        console.log("Component Mounting");
+        return console.log("Bye, Bye");
+    },[])
+
+    //shouldComponentUpdate
+    //componentDidUpdate
+    React.useEffect(()=>{
+        console.log("Planet changes");
+    },[planet])
+
+
+    return (
+        
+        <div>
+            <h1>
+                {props.name}
+            </h1>
+            <p>
+                {props.description}
+            </p>
+            <h1>
+                <button onClick= {()=>setPlanet("Saturn")}>{planet}</button>
+            </h1>
+            
+        </div>
+
+    )
+};
 
 export default User;
+
+
+
+//Hooks
+
+//use(Then purpose with capital letters)
+//useState()
