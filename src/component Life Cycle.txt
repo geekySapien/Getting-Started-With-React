@@ -15,7 +15,8 @@ componentDidMount() -> Is fired during initial render of a component.
 
 following 5 methods will be executed in the given order
 
-getDerivedStateFromProp(prop, state) -> returns either null or new state  object
+static getDerivedStateFromProp(prop, state) -> returns either null or new state
+object, it is a static method 
 
 shouldComponentUpdate(nextProp, nextState) -> returns boolean value 
 
